@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Parallax Scrolling</title>
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<section>
+			<img src="assets/img/universo.png" id="universo" alt="universo">
+			<img src="assets/img/neptuno1.png" id="neptuno1" alt="neptuno1">
+			<img src="assets/img/mercurio.png" id="mercurio" alt="mercurio">
+			<img src="assets/img/astronauta.png" id="astronauta" alt="astronauta">
+			<h2 id="text">Parallax</h2>
+		</section>
+		<script type="text/javascript">
+			let universo   = document.getElementById("universo");
+			let neptuno1   = document.getElementById("neptuno1");
+			let mercurio   = document.getElementById("mercurio");
+			let astronauta = document.getElementById("astronauta");
+			let text       = document.getElementById("text");
+			
+			window.addEventListener('scroll', function (){
+				var value = window.scrollY;
+				
+				universo.style.top      = value * 0.5 + 'px';
+				neptuno1.style.left     = value * 2 + 'px';
+				mercurio.style.left     = -value * 2 + 'px';
+				astronauta.style.top    = -value * 2 + 'px';
+				text.style.top          = value * 0.75 + 'px';
+			})
+		</script>
+	</body>
+</html>
